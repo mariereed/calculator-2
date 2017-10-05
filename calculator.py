@@ -20,9 +20,6 @@ def is_valid_operator(operator):
         return True
 
 
-
-
-
 while True:
     print ">",
     input_string = raw_input().rsplit()
@@ -33,9 +30,11 @@ while True:
     if not is_valid_operator(tokens[0]):
         print "Choose a valid operator or q(uit)"
         continue
+
     if not is_valid_arguments(tokens[1:]):
         print "Please only use valid arguments"
         continue
+
     if operator == "q":
         break
 
@@ -64,4 +63,3 @@ while True:
             print divide_more(tokens[1:])
         else:
             print "Please check your operators arguments"
-     
